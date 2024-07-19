@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/meal_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_to_favorites"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_heart_background"
+        android:padding="10dp"
+        android:src="@drawable/ic_heart"
+        android:translationZ="230dp"
+        app:layout_constraintBottom_toBottomOf="@id/meal_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meal_image"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/meal_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Beef"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintTop_toBottomOf="@id/meal_image"
+        android:layout_margin="8dp" />
+
+    <ImageView
+        android:id="@+id/location_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_location"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/meal_name"
+        app:layout_constraintTop_toTopOf="@id/meal_name"
+        app:layout_constraintBottom_toBottomOf="@id/meal_name"/>
+
+    <TextView
+        android:id="@+id/meal_location_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beef"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintTop_toTopOf="@id/location_image"
+        app:layout_constraintBottom_toBottomOf="@id/location_image"
+        app:layout_constraintStart_toEndOf="@id/location_image" />
+
+    <TextView
+        android:id="@+id/want_to_cook_it_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want to cook it yourself?"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/meal_name"
+        app:layout_constraintTop_toBottomOf="@id/meal_name" />
+
+
+    <TextView
+        android:id="@+id/meal_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want to cook it yourself?"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/want_to_cook_it_text"
+        app:layout_constraintTop_toBottomOf="@id/want_to_cook_it_text" />
+
+    <TextView
+        android:id="@+id/watch_video_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or watch a video?"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/meal_instructions"
+        app:layout_constraintTop_toBottomOf="@id/meal_instructions" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/youtube_image"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/ic_youtube"-->
+<!--        app:tint="@color/scarlet_red"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/watch_video_text"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/watch_video_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:use_controller="false" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
